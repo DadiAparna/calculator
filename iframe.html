@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="iframe.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <ul>
+            <li><a class="c">Currency</a></li>
+            <li><a class="m">Mass</a></li>
+            <li><a class="l">Length</a></li>
+            <li><a class="cal">Calculator</a></li>
+
+
+        </ul>
+    </div>
+    <iframe src="index.html" id="calci" width="1000" height="700" frameborder="0"></iframe>
+    <iframe src="length_converter.html" id="length" width="1500" height="400" frameborder="0"></iframe>
+
+    <iframe src="mass_converter.html" id="mass" width="1500" height="500" frameborder="0"></iframe>
+    <iframe src="currency_converter.html" id="currency" width="1500" height="600" frameborder="0"></iframe>
+
+
+</body>
+<script>
+
+   
+  document.querySelector(".c").onclick = function(){
+    document.getElementById("calci").style.display = "none";
+    document.getElementById("length").style.display = "none";
+    document.getElementById("mass").style.display = "none";
+    document.getElementById("currency").style.display = "block";
+
+
+  }
+  document.querySelector(".m").onclick = function(){
+    document.getElementById("calci").style.display = "none";
+    document.getElementById("length").style.display = "none";
+    document.getElementById("currency").style.display = "none";
+    document.getElementById("mass").style.display = "block";
+  }
+
+  document.querySelector(".l").onclick = function(){
+    document.getElementById("calci").style.display = "none";
+    document.getElementById("mass").style.display = "none";
+    document.getElementById("currency").style.display = "none";
+    document.getElementById("length").style.display = "block";
+
+
+  }
+
+  document.querySelector(".cal").onclick = function(){
+    document.getElementById("calci").style.display = "block";
+    document.getElementById("length").style.display = "none";
+    document.getElementById("mass").style.display = "none";
+    document.getElementById("currency").style.display = "none";
+
+
+}
+
+
+</script>
+
+
+</html>

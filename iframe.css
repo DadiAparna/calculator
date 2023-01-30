@@ -1,0 +1,25 @@
+.container {
+    background-color: rgba(238, 146, 146, 0.7);
+    height: 80px;
+}
+
+ul {
+    padding: 4px;
+}
+
+li {
+    display: inline;
+
+    font-size: 22px;
+}
+
+li a {
+    float: right;
+    margin-left: 10px;
+    text-decoration: none;
+    margin: 18px 20px;
+    color: rgb(6, 0, 36);
+}
+li a:hover{
+    color: rgb(222, 64, 195);
+}
