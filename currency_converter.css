@@ -69,5 +69,6 @@ button {
     
 }
 button:hover{
-    background-color: rgb(14, 2, 48,0.4);
+    background-color: rgba(9, 9, 102, 0.6);
+    color: white;
 }

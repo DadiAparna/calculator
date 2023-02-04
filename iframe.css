@@ -19,6 +19,8 @@ li a {
     text-decoration: none;
     margin: 18px 20px;
     color: rgb(6, 0, 36);
+    cursor: pointer;
+   caret-color: transparent;
 }
 li a:hover{
     color: rgb(222, 64, 195);
