@@ -81,7 +81,7 @@
         }
 
         if (inputTypeValue === "kilometer" && resultTypeValue === "meter") {
-            result.value = Number(input.value) * 0.001;
+            result.value = Number(input.value) * 1000;
         } else if (inputTypeValue === "kilometer" && resultTypeValue === "miles") {
             result.value = Number(input.value) * 0.621371;
         } else if (inputTypeValue === "kilometer" && resultTypeValue === "inches") {

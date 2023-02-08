@@ -1,16 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
 </head>
-<body>
-    
-    <div class="weather">
-        <input type="text" placeholder="enter the city name" class="input">
 
-    </div>
+<body>
+
+    <form id="Form">
+        <input Type="Text" id="Search" Placeholder="Search By Loaction" autocomplete="Off">
+    </form>
+    <main id="Main">
+
+    </main>
+
 </body>
+
+<script>
+
+    const ApiKey = "ENTER YOUR API KEY";
+
+    const Main = document.getElementById('Main');
+    const form = document.getElementById('Form');
+    const Search = document.getElementById('Search');
+      
+
+    
+    const Url = (City) => `https://api.openweathermap.org/data/3.0/onecall?lat=30.489772&lon=-99.771335 `;
+
+    
+    
+    async function getWeatherByLocation(City){
+         
+             const Resp = await fetch(Url(City), {
+                 Origin: "Cros"
+             });
+             const RespData = await resp.json();
+
+        AddWeatherToPage(RespData);
+
+    }
+    
+          function AddWeatherToPage(Data){
+              const Temp = Ktoc(Data.Main.Temp);
+    
+              const Weather = document.CreateElement('Div')
+        weather.classList.add('weather');
+
+        weather.innerHTML = `
+              <h2><img src="https://openweathermap.org/img/wn/${Data.weather[0].Icon}@2x.Png" /> ${temp}°C <Img Src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.Png" /></h2>
+              <small>${data.weather[0].main}</small>
+              
+              `;
+
+
+        //   Cleanup 
+        main.innerHTML = "";
+        main.appendChild(Weather);
+    };
+    
+    
+         function Ktoc(K){
+             return math.floor(K - 273.15);
+    }
+
+
+
+    form.addEventListener('Submit', (E) => {
+        E.preventDefault();
+    
+            const City = Search.Value;
+
+        if(City) {
+            getWeatherByLocation(City)
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+
+</script>
+
 </html>
