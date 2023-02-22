@@ -6,120 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="mass_converter.css">
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <div class="mass">
         <div class="container">
-            <h1>Mass Converter</h1>
+            <h1 class="text-dark">Mass Converter</h1>
 
             <div class="box">
                 <div class="left-box">
 
-                    <select name="mass" class="mass" id="inputType">
+                    <select name="mass" class="form-select" aria-label="Default select example" id="userType">
                         <option value="kilograms">Kilograms</option>
                         <option value="grams">Grams</option>
                         <option value="pounds">Pounds</option>
                         <option value="tonnes">Tonnes</option>
-                        <option value="ounces">ounce</option>
+
                     </select>
-                    <input type="text" placeholder="" id="input">
+                    <input type="text" class="form-control" placeholder="" id="user">
                 </div>
 
                 <div class="right-box">
 
-                    <select name="mass" class="mass" id="resultType">
+                    <select name="mass" class="form-select" aria-label="Default select example" id="resType">
                         <option value="kilograms">Kilograms</option>
                         <option value="grams">Grams</option>
                         <option value="pounds">Pounds</option>
                         <option value="tonnes">Tonnes</option>
-                        <option value="ounces">ounce</option>
+
                     </select>
-                    <input type="text" placeholder="" id="result">
+                    <input type="text" class="form-control" placeholder="" id="res">
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
-    </body>
-    <script>
+</body>
 
-
-        var input = document.getElementById("input");
-        var result = document.getElementById("result");
-        var inputType = document.getElementById("inputType");
-        var resultType = document.getElementById("resultType");
-        
-
-        input.addEventListener("keyup", myResult);
-        inputType.addEventListener("change", myResult);
-        resultType.addEventListener("change", myResult);
-
-      
-        function myResult() {
-            //result.value = input.value;
-
-            inputTypeValue = inputType.value;
-            resultTypeValue = resultType.value;
-
-            //adding formula
-
-            if (inputTypeValue === "kilograms" && resultTypeValue === "grams") {
-                result.value = Number(input.value) * 1000;
-            } else if (inputTypeValue === "kilograms" && resultTypeValue === "pounds") {
-                result.value = Number(input.value) * 2.20462;
-            } else if (inputTypeValue === "kilograms" && resultTypeValue === "tonnes") {
-                result.value = Number(input.value) * 0.001;
-            } else if (inputTypeValue === "kilograms" && resultTypeValue === "ounces") {
-                result.value = Number(input.value) * 35.274;
-            } else if (inputTypeValue === "kilograms" && resultTypeValue === "kilograms") {
-                result.value = Number(input.value);
-            }
-
-
-            if (inputTypeValue === "grams" && resultTypeValue === "kilograms") {
-                result.value = Number(input.value) * 0.001;
-            } else if (inputTypeValue === "grams" && resultTypeValue === "pounds") {
-                result.value = Number(input.value) * 0.00220462;
-            } else if (inputTypeValue === "grams" && resultTypeValue === "tonnes") {
-                result.value = Number(input.value) * 0.0000001;
-            } else if (inputTypeValue === "grams" && resultTypeValue === "ounces") {
-                result.value = Number(input.value) * 0.035274;
-            } else if (inputTypeValue === "grams" && resultTypeValue === "grams") {
-                result.value = Number(input.value);
-            }
-
-
-            if (inputTypeValue === "pounds" && resultTypeValue === "kilograms") {
-                result.value = Number(input.value) * 0.453592;
-            } else if (inputTypeValue === "pounds" && resultTypeValue === "grams") {
-                result.value = Number(input.value) * 453.592;
-            } else if (inputTypeValue === "pounds" && resultTypeValue === "tonnes") {
-                result.value = Number(input.value) * 0.000453592;
-            } else if (inputTypeValue === "pounds" && resultTypeValue === "ounces") {
-                result.value = Number(input.value) * 16;
-            } else if (inputTypeValue === "pounds" && resultTypeValue === "pounds") {
-                result.value = Number(input.value);
-            }
-
-
-            if (inputTypeValue === "tonnes" && resultTypeValue === "kilograms") {
-                result.value = Number(input.value) * 1000;
-            } else if (inputTypeValue === "tonnes" && resultTypeValue === "grams") {
-                result.value = Number(input.value) * 1000000;
-            } else if (inputTypeValue === "tonnes" && resultTypeValue === "pounds") {
-                result.value = Number(input.value) * 2204.62;
-            } else if (inputTypeValue === "tonnes" && resultTypeValue === "ounces") {
-                result.value = Number(input.value) * 35273.962;
-            } else if (inputTypeValue === "tonnes" && resultTypeValue === "tonnes") {
-                result.value = Number(input.value);
-            }
-
-        }
-
-
-    </script>
 
 </html>

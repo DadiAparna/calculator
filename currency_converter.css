@@ -13,8 +13,8 @@ body {
 
 .container {
     background-color: rgb(249, 214, 153,0.6);
-    width: 73%;
-    height: 250px;
+    width: 88%;
+    height: 300px;
 }
 
 .box {
@@ -56,19 +56,15 @@ input {
 }
 
 h1 {
-    margin: 15px 75px ;
-    padding-top: 20px;
-  
+    margin: 35px 0 0 155px ;
+   font-size:30px;
+  padding-top: 15px;
 }
 
 button {
-    width: 62%;
-    border-radius: 50px;
+    width: 32%;
+ 
     height: 35px;
-    margin-left: 90px;
+    margin:20px 0 0 190px;
     
-}
-button:hover{
-    background-color: rgba(9, 9, 102, 0.6);
-    color: white;
 }

@@ -1,54 +1,105 @@
-table {
-    margin: auto;
-}
-
-input {
-    border-radius: 28px;
-    margin: 0 0 20px 10px;
-    font-size: 34px;
-    height: 40px;
-    width: 330px;
-   padding-left: 8px;
-}
-
-button {
-    border-radius: 100px;
-    font-size: 30px;
-    background: #1a0249;
-    width: 70px;
-    height: 68px;
-    margin: 8px;
-    color: white;
-  
-}
-
 .calculator {
 
-    background-color:rgb(248, 220, 227);
+    background-color: rgb(248, 220, 227);
     padding: 33px;
     border-radius: 53px;
     display: inline-block;
-    margin-left: 450px;
-    margin-top: 28px;
+    margin: 10px 0 0 400px;
+    height: 500px;
+    caret-color: transparent;
 }
 
-#btn {
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-    margin: 50px 0 0 150px;
-    background-color: #1b0451;
-    color: white;
+.btn {
+    background-color: rgb(4, 4, 53);
+    top: 48px;
+    width: 70px;
+    height: 68px;
+    margin:5px 0 0 5px;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: rgb(195, 143, 244);
+}
+.form-control{
+    margin-top: -20px;
+}
+
+/*-------------------mass  & length-----------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color:rgb(249, 214, 153,0.6); ;
+    height: 300px;
+  caret-color: transparent;
 }
 
 .box {
-    margin-top: -30%;
-
+    display: flex;
+   
 }
 
 .left-box {
-    margin-bottom: 20px;
+    margin: 30px 40px 0 80px;
+}
+
+.right-box {
+    margin: 30px;
+}
+
+
+input {
+  
+   position: relative;
+   bottom: -30px;
+   
+}
+
+h1 {
+    margin-left: 150px;
+    padding-top: 14px;
+    
+}
+
+/*----------------------- weather -----------------------------*/
+
+* {
+    box-sizing: border-box;
 
 }
-/*-------------------------mass------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+
+}
+.weather {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.weather h2 {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+
 

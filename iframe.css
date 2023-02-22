@@ -1,6 +1,7 @@
 .container {
-    background-color: rgba(238, 146, 146, 0.7);
+    background-color: rgba(241, 138, 224, 0.3);
     height: 80px;
+  
 }
 
 ul {
@@ -14,7 +15,7 @@ li {
 }
 
 li a {
-    float: right;
+   float: right;
     margin-left: 10px;
     text-decoration: none;
     margin: 18px 20px;

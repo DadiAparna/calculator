@@ -6,64 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="iframe.css">
+   
 </head>
 
 <body>
 
-    
-    
-    <!------------------------------------------------------------caluclator----------------------------------------------------------------->
-    <div class="calci">
-    <div class="calculator">
+    <div class="container">
 
-        <input type="text" name="screen" id="screen">
-        <table>
-            <tr>
-                <td><button onclick="show('(')">(</button></td>
-                <td><button onclick="show(')')">)</button></td>
-                <td><button onclick="c()">C</button></td>
-                <td><button onclick="show('%')">%</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="show('7')">7</button></td>
-                <td><button onclick="show('8')">8</button></td>
-                <td><button onclick="show('9')">9</button></td>
-                <td><button onclick="show('*')">*</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="show('4')">4</button></td>
-                <td><button onclick="show('5')">5</button></td>
-                <td><button onclick="show('6')">6</button></td>
-                <td><button onclick="show('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="show('1')">1</button></td>
-                <td><button onclick="show('2')">2</button></td>
-                <td><button onclick="show('3')">3</button></td>
-                <td><button onclick="show('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="show('0')">0</button></td>
-                <td><button onclick="show('.')">.</button></td>
-                <td><button onclick="show('/')">/</button></td>
-                <td><button onclick="cal()">=</button></td>
-            </tr>
-        </table>
+        <ul>
+          <li><a class="w">Weather</a></li>
+            <li><a class="c">Currency</a></li>
+            <li><a class="m">Mass</a></li>
+            <li><a class="l">Length</a></li>
+            <li><a class="cal">Calculator</a></li>
+          
+
+
+        </ul>
+      
     </div>
-</div>
+    <iframe src="calculator.html" id="calci" width="1000" height="600" frameborder="0"></iframe>
+    <iframe src="length_converter.html" id="length" width="1400" height="700" frameborder="0"></iframe>
+
+    <iframe src="mass_converter.html" id="mass" width="1500" height="500" frameborder="0"></iframe>
+    <iframe src="currency_converter.html" id="currency" width="1500" height="700" frameborder="0"></iframe>
+    <iframe src="weather.html" id="weather" width="1500" height="600" frameborder="0"></iframe>
+
+
 </body>
-<script>
-    function c() {
-        document.getElementById("screen").value = "";
-    }
-    function show(input) {
-        document.getElementById("screen").value += input;
-    }
-    function cal() {
-        var output = eval(document.getElementById("screen").value);
-        document.getElementById("screen").value = output
-    }
-</script>
+
+<script src="main.js"></script>
 
 </html>
+
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

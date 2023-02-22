@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="currency_converter.css">
 </head>
 
@@ -20,19 +21,19 @@
             </div>
 
             <div class="right-box">
-                <select name="currency" class="currency"></select>
+                <select name="currency"  class="currency"></select>
                 <input type="text" name="" id="result">
             </div>
         </div>
 
-        <button class="btn" id="btn">convert</button>
+        <button  class="btn btn-secondary" id="btn">convert</button>
     </div>
 </div>
 </body>
 
 <script>
 
-    const select = document.querySelectorAll('.currency');
+const select = document.querySelectorAll('.currency');
     const btn = document.getElementById('btn');
     const num = document.getElementById('num');
     const result = document.getElementById('result');
